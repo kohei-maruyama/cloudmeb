@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-09 18:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: assets/js/app.js:55 assets/js/app.min.js:2
+msgid "Close"
+msgstr ""
+
+#: assets/js/app.js:598 assets/js/app.js:599 assets/js/app.min.js:4
+#: assets/js/app.min.js:5
+msgid "products"
+msgstr ""
+
+#: assets/js/app.js:602 assets/js/app.js:603 assets/js/app.min.js:5
+msgid "services"
+msgstr ""
+
+#: assets/js/app.js:1138 assets/js/app.min.js:34
+msgid "selected"
+msgstr ""
+
+#: assets/js/app.js:1138 assets/js/app.js:1144 assets/js/app.min.js:34
+#: assets/js/app.min.js:35
+msgid "select"
+msgstr ""
+
+#: assets/js/app.js:1192 assets/js/app.js:1242 assets/js/app.min.js:36
+#: assets/js/app.min.js:38
+msgid "added!"
+msgstr ""
+
+#: assets/js/app.js:1192 assets/js/app.js:1299 assets/js/app.min.js:36
+#: assets/js/app.min.js:40
+msgid "removed!"
+msgstr ""
+
+#: assets/js/app.js:1447 assets/js/app.min.js:15
+msgid "%(fieldName)s is not valid!"
+msgstr ""
+
+#: assets/js/app.js:1534 assets/js/app.min.js:46
+msgid "configured!"
+msgstr ""
+
+#: assets/js/app.js:1579 assets/js/app.js:1613 assets/js/app.min.js:48
+msgid "Thanks for reaching out %(fname)s, we'll get back to you shortly."
+msgstr ""
+
+#: assets/js/app.js:1584 assets/js/app.js:1618 assets/js/app.min.js:48
+msgid "We were unable to deliver your message, please try again later."
+msgstr ""
+
+#: assets/js/app.js:1652 assets/js/app.js:1692 assets/js/app.js:1735
+#: assets/js/app.min.js:50 assets/js/app.min.js:52
+msgid "Thanks for reaching out %(first_name)s, we'll get back to you shortly."
+msgstr ""
+
+#: assets/js/app.js:1657 assets/js/app.js:1697 assets/js/app.min.js:50
+msgid ""
+"We were unable to deliver your partnership request, please try again later."
+msgstr ""
+
+#: assets/js/app.js:1740 assets/js/app.min.js:52
+msgid "We were unable to deliver your quote request, please try again later."
+msgstr ""
+
+#: assets/js/app.js:1810 assets/js/app.min.js:54
+msgid "You have unsaved changes."
+msgstr ""

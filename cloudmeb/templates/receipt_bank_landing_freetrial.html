@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block nav %}
+{% include "nav.html" with active_page="why_cloudmeb" class_names="navbar-scroll" %}
+{% endblock %}
+
+{% block content %}
+
+<style>
+    /* code for animated blinking cursor */
+    .typed-cursor{
+        opacity: 1;
+        font-weight: 100;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        -ms-animation: blink 0.7s infinite;
+        -o-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+        font-size: 48px;
+        color: #ffffff;
+    }
+    @-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-ms-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-o-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+
+    .navbar-customizing {
+        display:none;
+    }
+    .navbar-toggle {
+       display:none;
+    }
+
+
+</style>
+
+<div class="hero-unit hero-overlayed receipt-bank-hero">
+    <div class="lead container text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 col-sm-12 col-xs-12"></div>
+                <div class="col-md-8 col-sm-12 col-xs-12 mobile-head-txt">
+                    <!--<h1 class="strong-heading">{% trans "Simplify your business<br> in the cloud" %}</h1>-->
+                    <h1 class="strong-heading">{% ifequal LANGUAGE_CODE 'fr' %}{{ receipt_bank_txt.receipt_bank_txt_header_title_fr }}{% else%}{{ receipt_bank_txt.receipt_bank_txt_header_title_en }}{% endifequal %}</h1>
+                    <h3>{% ifequal LANGUAGE_CODE 'fr' %}{{ receipt_bank_txt.receipt_bank_txt_header_subtitle_fr }}{% else%}{{ receipt_bank_txt.receipt_bank_txt_header_subtitle_en }}{% endifequal %}</h3>
+                    <a href="https://cloudmeb.chargify.com/subscribe/xn7zsrwqb6v4/solo-20" target="_blank" class="btn btn-default btn-plug btn-lg banner-btn" title="{% trans 'free sign start' %}">
+                        {% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.14.shared_txt_name_fr }}{% else%}{{ shared_txts.14.shared_txt_name_en }}{% endifequal %}
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                <div class="col-md-12 col-sm-12 col-xs-12 banner-plugin-btn">
+                </div>
+            </div>
+        </div>
+    </div>
+    <video autoplay loop muted poster="{% static 'image/hero-receipt.png' %}">
+        <source src="{% static 'video/what-receipt.mp4' %}" type="video/mp4">
+    </video>
+    <!--<div class="mute-control-btn">
+        <div class="mute-btn">
+            <img class="mute-icon" src="{% static 'image/mute.png' %}">
+            <img class="unmute-icon" src="{% static 'image/sound.png' %}">
+        </div>
+    </div>-->
+</div>
+
+<div class="container-fluid">
+    <div class="row receipt-freeintroduce">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="receipt-freeintroduce-header">{% ifequal LANGUAGE_CODE 'fr' %}{{receipt_bank_txt.receipt_bank_txt_freeintroduce_title_fr}}{% else%}{{receipt_bank_txt.receipt_bank_txt_freeintroduce_title_en}}{% endifequal %}</h1>
+                    <p class="receipt-freeintroduce-content">{% ifequal LANGUAGE_CODE 'fr' %}{{receipt_bank_txt.receipt_bank_txt_freeintroduce_text_fr}}{% else%}{{receipt_bank_txt.receipt_bank_txt_freeintroduce_text_en}}{% endifequal %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="receipt-supercharge">
+{#                    <div class="supercharge-title">#}
+{#                        <h2>{% ifequal LANGUAGE_CODE 'fr' %}{{receipt_bank_txt.receipt_bank_txt_supercharge_title_fr}}{% else%}{{receipt_bank_txt.receipt_bank_txt_supercharge_title_en}}{% endifequal %}</h2>#}
+{#                    </div>#}
+                    <div class="receipt-supercharge-content">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            {% ifequal LANGUAGE_CODE 'fr' %}<img src="{% static 'image/french image RB landing.JPG' %}">{% else%}<img src="{% static 'image/english image RB landing.JPG' %}">{% endifequal %}
+                        </div>
+{#                        <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">#}
+{#                            <div class="receipt-send-content">#}
+{#                                <ul>#}
+{#                                    <li><img src="{% static 'image/muli_paper.png' %}"></li>#}
+{#                                    <li><p>#}
+{#                                        {% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.19.shared_txt_name_fr }}{% else%}{{ shared_txts.19.shared_txt_name_en }}{% endifequal %}#}
+{#                                    </p></li>#}
+{#                                    <li>{% ifequal LANGUAGE_CODE 'fr' %}<img src="{% static 'image/paper_arrow_fr.png' %}">{% else%}<img src="{% static 'image/paper_arrow_en.png' %}">{% endifequal %}</li>#}
+{#                                    <li><img src="{% static 'image/mobile.png' %}"></li>#}
+{#                                    <img src="{% static 'image/reclaim.png' %}">                                #}
+{#                                </ul>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">#}
+{#                            <div class="receipt-send-content content-right">#}
+{#                                <ul>#}
+{#                                    <li><img src="{% static 'image/email_box.png' %}"></li>#}
+{#                                    <li><p>#}
+{#                                        {% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.20.shared_txt_name_fr }}{% else%}{{ shared_txts.20.shared_txt_name_en }}{% endifequal %}#}
+{#                                    </p></li>#}
+{#                                    <li>{% ifequal LANGUAGE_CODE 'fr' %}<img src="{% static 'image/email_arrow_fr.png' %}">{% else%}<img src="{% static 'image/email_arrow_en.png' %}">{% endifequal %}</li>#}
+{#                                    <li><img src="{% static 'image/desktop.png' %}"></li>#}
+{#                                    <img src="{% static 'image/reclaim.png' %}">                                #}
+{#                                </ul>#}
+{#                                <!doctype html>#}
+{#                                    <html lang="en">#}
+{#                                    <head>#}
+{#                                        <meta charset="UTF-8">#}
+{#                                        <meta name="viewport"#}
+{#                                              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">#}
+{#                                        <meta http-equiv="X-UA-Compatible" content="ie=edge">#}
+{#                                        <title>Document</title>#}
+{#                                    </head>#}
+{#                                    <body>#}
+{#                                    #}
+{#                                    </body>#}
+{#                                    </html></p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">#}
+{#                            <p class="receipt-availabe-content">{% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.21.shared_txt_name_fr }}{% else%}{{ shared_txts.21.shared_txt_name_en }}{% endifequal %}</p>#}
+{#                        </div>#}
+{#                        <div class="col-lg-12 col-md-9 col-sm-9 col-xs-9">#}
+{#                            <div class="receipt-send-icon">#}
+{#                                <img src="{% static 'image/xero.png' %}">#}
+{#                                <img src="{% static 'image/qb.png' %}">#}
+{#                                <img src="{% static 'image/xls.png' %}">#}
+{#                                <img src="{% static 'image/pdf.png' %}">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="clear-tag"></div>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="how-work">
+{#            <h2 class="how-work-title">{% ifequal LANGUAGE_CODE 'fr' %}{{receipt_bank_txt.receipt_bank_txt_how_work_title_fr}}{% else%}{{receipt_bank_txt.receipt_bank_txt_how_work_title_en}}{% endifequal %}</h2>#}
+            <div class="hero-unit hero-overlayed receipt-bank-work-video">
+                <video poster="{% static 'image/hero-receipt-step.png' %}">
+                    {% ifequal LANGUAGE_CODE 'fr' %}
+                    <source src="{% static 'video/receipt-step-by-fr.mp4' %}" type="video/mp4">
+                    {% else%}  
+                    <source src="{% static 'video/receipt-step-by.mp4' %}" type="video/mp4">
+                    {% endifequal %}
+                </video>
+                <div class="second-video-control">
+                    <div class="control-btn">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="mute-control-btn">
+                <div class="mute-btn">
+                    <img class="mute-icon" src="{% static 'image/mute.png' %}">
+                    <img class="unmute-icon" src="{% static 'image/sound.png' %}">
+                </div>
+            </div>-->
+        </div>
+        <div class="free-start-now">
+            <div class="wrap text-desktop">
+                <div class="type-wrap">
+                    <div id="typed-strings">
+                        <span>{% ifequal LANGUAGE_CODE 'fr' %}{{receipt_bank_txt.receipt_bank_txt_start_now_title_fr}}{% else%}{{receipt_bank_txt.receipt_bank_txt_start_now_title_en}}{% endifequal %}</span>
+                    </div>
+                    <span id="typed" class="free-start-now-title"></span>
+                </div>
+            </div>
+            <span class="free-start-now-title text-mobile">{% ifequal LANGUAGE_CODE 'fr' %}{{receipt_bank_txt.receipt_bank_txt_start_now_title_fr}}{% else%}{{receipt_bank_txt.receipt_bank_txt_start_now_title_en}}{% endifequal %}</span>
+            <a href="https://cloudmeb.chargify.com/subscribe/xn7zsrwqb6v4/solo-20" target="_blank" class="btn btn-default btn-lg free-start-btn" title="{% trans 'start free' %}">
+                {% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.14.shared_txt_name_fr }}{% else%}{{ shared_txts.14.shared_txt_name_en }}{% endifequal %}
+            </a>
+        </div>
+        <div class="packages-table">
+            <div class="container">
+                <h2 class="table-header">
+                    {% ifequal LANGUAGE_CODE 'fr' %}Nos prix exclusifs vous sauve de l'argent{% else%}Our exclusive pricing lets you save on all packages{% endifequal %}
+                </h2>
+                <div class="row">
+                    {% for packages_table in packages_tables %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="packages-table-content">
+                            <p class="package-plan">{{ packages_table.packages_table_plan }}</p>
+                            <p class="package-description">{% ifequal LANGUAGE_CODE 'fr' %}{{packages_table.packages_table_description_fr}}{% else%}{{packages_table.packages_table_description_en}}{% endifequal %}</p>
+                            <p class="retail-price">{% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.15.shared_txt_name_fr }}{% else%}{{ shared_txts.15.shared_txt_name_en }}{% endifequal %}<span>{{ packages_table.packages_table_retail }}</span></p>
+                            <p class="mth-price">{{ packages_table.packages_table_cloudmeb }}<span>{% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.16.shared_txt_name_fr }}{% else%}{{ shared_txts.16.shared_txt_name_en }}{% endifequal %}</span></p>
+                            <p class="saving-percentage">{{ packages_table.packages_table_savings }} {% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.17.shared_txt_name_fr }}{% else%}{{ shared_txts.17.shared_txt_name_en }}{% endifequal %}</p>
+                            <a href="{{ packages_table.packages_table_gateway_link }}" target="_blank" class="free-trial-link-btn">{% ifequal LANGUAGE_CODE 'fr' %}{{ shared_txts.18.shared_txt_name_fr }}{% else%}{{ shared_txts.18.shared_txt_name_en }}{% endifequal %}</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="features-list">
+                <h4 class="read-more-feature">Features</h4>
+                {% for benefit in product.solution_benefits.all %}
+                <div class="media row new-benefits-item" data-id="{{ benefit.id }}">
+                    <div class="col-md-12">
+                        <h4 class="media-heading strong-heading">{{ benefit.benefit_name }}</h4>
+                        <br />
+                        <div class="feature-content-detail">
+                            <img src="{{ benefit.benefit_image.url }}" alt="{{ benefit.benefit_name }}">
+                            <p>{{ benefit.benefit_description }}</p>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="service-category-list" style="display: none;">
+    {% for service in services %}
+    <div class="footer-menu-category-list">
+        <p class="category">{% for category in service.solution_categories.all %}{{ category.category_name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+        <p class="service-slug">{{ service.solution_slug }}</p>
+    </div>
+    {% endfor %}
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+    .receipt-freeintroduce p.receipt-freeintroduce-content{
+        border: none;
+    }
+    </style>
+{% endblock%}
